@@ -5,24 +5,28 @@ app.use(express.json()); // POST methods, when user input here you can insert da
 
 const allYamahaBikes = [
   {
+    id: 1,
     bikeName: "MT 15",
     milage: "45 kmpl",
     engine: "155cc",
     price: 525000,
   },
   {
+    id: 2,
     bikeName: "R15 v4",
     milage: "40 kmpl",
     engine: "155cc",
     price: 555000,
   },
   {
+    id: 3,
     bikeName: "Fazer",
     milage: "45 kmpl",
     engine: "149.5 cc",
     price: 299000,
   },
   {
+    id: 4,
     bikeName: "FZ-S v2",
     milage: "40 kmpl",
     engine: "149cc",
@@ -105,6 +109,8 @@ app.post("/suzuki", (req, res) => {
   allSuzukiBikes.push(inputSuzuki);
   res.json(allSuzukiBikes);
 });
+
+app.delete("/yamaha");
 
 app.listen(4040, () => {
   console.log("server is listening port 4040");
